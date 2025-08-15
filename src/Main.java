@@ -1,9 +1,15 @@
+import java.io.IOException;
+import java.util.Locale;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 //    mathCalculation();
-        showCircumferenceAndArea();
+//        showCircumferenceAndArea();
+//        whileLoop();
+        numberGuessing();
+
     }
 
     public static void mathCalculation() {
@@ -56,6 +62,27 @@ public class Main {
         System.out.printf("volume is: %.1f\n", volume);
     }
 
+    public static void whileLoop() {
+        String response = "";
+        int userAge = 0;
+
+        Scanner scanner = new Scanner(System.in);
+        while (!response.equals("Q")) {
+            System.out.println("You are playing a game");
+            System.out.print("Press Q to exit the game: ");
+            response = scanner.next().toUpperCase();
+        }
+        // Clears screen for ANSI-compatible terminals
+
+
+        do {
+            System.out.println("your age cant be negative !");
+            System.out.print("Enter your age: ");
+            userAge = scanner.nextInt();
+        } while (userAge < 0);
+
+        scanner.close();
+    }
 
     public static void logCommand() {
         int myAge = 27;
@@ -86,5 +113,27 @@ public class Main {
 
         System.out.println("user info : " + userInfo + userAge + userGpa + isTeacher);
 
+    }
+
+    public static void numberGuessing() {
+        int randomNumber;
+        int guess;
+        int attempts = 3;
+
+        System.out.println("");
+        Random random = new Random();
+        randomNumber = random.nextInt(1, 11);
+        Scanner scanner = new Scanner(System.in);
+        while (attempts > 0) {
+            System.out.printf("Guess The Number 1-10 (you have %d opportunity): ", attempts);
+            guess = scanner.nextInt();
+            if (guess == randomNumber) {
+                System.out.println("Great, you were right !");
+            } else {
+                attempts--;
+            }
+        }
+        System.out.println("The Random Number is: " + randomNumber);
+        scanner.close();
     }
 }
