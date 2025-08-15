@@ -8,8 +8,9 @@ public class Main {
 //    mathCalculation();
 //        showCircumferenceAndArea();
 //        whileLoop();
-        numberGuessing();
-
+//        numberGuessing();
+//        forLoop();
+        matrix();
     }
 
     public static void mathCalculation() {
@@ -135,5 +136,49 @@ public class Main {
         }
         System.out.println("The Random Number is: " + randomNumber);
         scanner.close();
+    }
+
+    public static void forLoop() {
+        for (int i = 1; i < 11; i++) {
+            if (i == 7) {
+                break;
+            }
+            if (i == 2) {
+                continue;
+            }
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        System.out.println();
+        for (int x = 1; x <= 4; x++) {
+            for (int z = 1; z <= 10; z++) {
+                System.out.print(z + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void matrix() {
+        int rows;
+        int columns;
+        char symbol;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter The number of rows: ");
+        rows = scanner.nextInt();
+        System.out.print("Enter the number of columns: ");
+        columns = scanner.nextInt();
+        System.out.print("Enter the symbol: ");
+        symbol = scanner.next().charAt(0);
+        scanner.close();
+
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                System.out.print(symbol+" ");
+            }
+            System.out.println();
+        }
+
     }
 }
