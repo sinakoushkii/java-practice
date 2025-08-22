@@ -10,7 +10,41 @@ public class Main {
 //        whileLoop();
 //        numberGuessing();
 //        forLoop();
-        matrix();
+//        matrix();
+//        bankSystem();
+
+    }
+
+    static void bankSystem(){
+        double balance;
+        boolean isRunning=true;
+        int choice;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("***************");
+        System.out.println("Banking System");
+        System.out.println("***************");
+
+        System.out.println("1. Show balance");
+        System.out.println("2. Deposit");
+        System.out.println("3. Withdraw");
+        System.out.println("4. Exit");
+        System.out.print("Enter your choice : ");
+        choice=scanner.nextInt();
+
+        switch (choice){
+            case 1-> System.out.println("showing the balance");
+            case 2-> System.out.println("depositing");
+        }
+        scanner.close();
+    }
+    //    overloaded methods share the same name but different parameter
+    static double add(double numberA, double numberB) {
+        return numberA + numberB;
+    }
+
+    static double add(double numberA, double numberB, double numberC) {
+        return numberA + numberB + numberC;
     }
 
     public static void mathCalculation() {
@@ -175,7 +209,7 @@ public class Main {
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                System.out.print(symbol+" ");
+                System.out.print(symbol + " ");
             }
             System.out.println();
         }
