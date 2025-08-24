@@ -12,12 +12,37 @@ public class Main {
 //        forLoop();
 //        matrix();
 //        bankSystem();
+//        Car car1 = new Car();
+//        Student student1 = new Student("sina",27,20);
+//        Student student2= new Student("Amir",17,18);
+//        User user1=new User("sinakoushki");
+//        User user2 = new User("Amir hossein","Amir12@gmail.com");
+//        User user3 = new User();
+//        user1.showInfo();
+//        user2.showInfo();
+//        user3.showInfo();
 
+
+//        student1.study();
+//        student2.study();
+//
+//        System.out.println(student1.gpa);
+//
+//        car1.start();
+//        car1.drive();
+//        System.out.println(car1.price);
+
+
+        Friend friend1=new Friend("Amir");
+        Friend friend2=new Friend("Reza");
+        Friend friend3=new Friend("Naser");
+        System.out.println(Friend.numberOfFriends);
+        Friend.showNumberOfFriends();
     }
 
-    static void bankSystem(){
+    static void bankSystem() {
         double balance;
-        boolean isRunning=true;
+        boolean isRunning = true;
         int choice;
 
         Scanner scanner = new Scanner(System.in);
@@ -30,14 +55,15 @@ public class Main {
         System.out.println("3. Withdraw");
         System.out.println("4. Exit");
         System.out.print("Enter your choice : ");
-        choice=scanner.nextInt();
+        choice = scanner.nextInt();
 
-        switch (choice){
-            case 1-> System.out.println("showing the balance");
-            case 2-> System.out.println("depositing");
+        switch (choice) {
+            case 1 -> System.out.println("showing the balance");
+            case 2 -> System.out.println("depositing");
         }
         scanner.close();
     }
+
     //    overloaded methods share the same name but different parameter
     static double add(double numberA, double numberB) {
         return numberA + numberB;
