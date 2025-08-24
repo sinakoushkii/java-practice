@@ -5,39 +5,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-//    mathCalculation();
-//        showCircumferenceAndArea();
-//        whileLoop();
-//        numberGuessing();
-//        forLoop();
-//        matrix();
-//        bankSystem();
-//        Car car1 = new Car();
-//        Student student1 = new Student("sina",27,20);
-//        Student student2= new Student("Amir",17,18);
-//        User user1=new User("sinakoushki");
-//        User user2 = new User("Amir hossein","Amir12@gmail.com");
-//        User user3 = new User();
-//        user1.showInfo();
-//        user2.showInfo();
-//        user3.showInfo();
+        Dog rex=new Dog();
+        Cat malos=new Cat();
+        Plant flower=new Plant();
 
-
-//        student1.study();
-//        student2.study();
-//
-//        System.out.println(student1.gpa);
-//
-//        car1.start();
-//        car1.drive();
-//        System.out.println(car1.price);
-
-
-        Friend friend1=new Friend("Amir");
-        Friend friend2=new Friend("Reza");
-        Friend friend3=new Friend("Naser");
-        System.out.println(Friend.numberOfFriends);
-        Friend.showNumberOfFriends();
+        flower.eat();
+        malos.speak();
+        rex.speak();
+        malos.eat();
     }
 
     static void bankSystem() {
